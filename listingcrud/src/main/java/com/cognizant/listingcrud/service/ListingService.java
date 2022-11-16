@@ -30,4 +30,13 @@ public class ListingService {
         return lr.saveAndFlush(l);
     }
 
+    public List<Listing> getByLocationId(int locationId){
+        return lr.findByLocationId(locationId);
+    }
+
+    public Listing createListing(String address, String type, int locationId, double price, int guests, int cap){
+        Listing l = new Listing(0,address,type,locationId,price,guests,cap);
+        return lr.save(l);
+    }
+
 }

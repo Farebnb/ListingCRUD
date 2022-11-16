@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,7 +30,7 @@ public class ListingController {
         this.ls = ls;
     }
 
-    @GetMapping("/id")
+    @GetMapping("/")
     public ResponseEntity<Listing> getById(@RequestParam int id){
         return new ResponseEntity<>(ls.getById(id), HttpStatus.ACCEPTED);
     }
@@ -45,8 +46,8 @@ public class ListingController {
         return new ResponseEntity<Listing>(ls.update(listing), HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping("{id}")
-    public ResponseEntity<Listing> deleteListing(@PathVariable("id") int id ){
+    @DeleteMapping("/delete")
+    public ResponseEntity<Listing> deleteListing(@RequestParam int id ){
         Listing list = ls.getById(id);
         if (list == null) {
             return ResponseEntity.notFound().build();
@@ -55,4 +56,17 @@ public class ListingController {
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
+    @GetMapping("/locationId")
+    public ResponseEntity<List<Listing>> getByLocationId(@RequestParam int locationId){
+        return new ResponseEntity<>(ls.getByLocationId(locationId), HttpStatus.ACCEPTED);
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<Listing> createListing(@RequestBody LinkedHashMap<String, String> body){
+        double p = Double.parseDouble(body.get("price"));
+        int guest = Integer.parseInt(body.get("guests"));
+        int caps = Integer.parseInt(body.get("cap"));
+        int lId = Integer.parseInt(body.get("locationId"));
+        return new ResponseEntity<>(ls.createListing(body.get("address"),body.get("type"),lId, p, guest, caps  ), HttpStatus.ACCEPTED);
+    }
 }

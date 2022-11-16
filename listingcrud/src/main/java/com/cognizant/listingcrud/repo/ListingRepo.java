@@ -13,6 +13,6 @@ public interface ListingRepo extends JpaRepository<Listing, Integer> {
 
     List<Listing> findAll();
 
-
+    List<Listing> findByLocationId(int locationId);
 
 }

@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -23,7 +20,8 @@ public class Listing {
 
     private String type;
 
-    private int locationid;
+    @Column(name = "LOCATIONID")
+    private int locationId;
 
     private double price;
 
