@@ -23,6 +23,8 @@ public class Listing {
     @Column(name = "LOCATIONID")
     private int locationId;
 
+    private String image;
+
     private double price;
 
     private int guests;

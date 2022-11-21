@@ -34,8 +34,8 @@ public class ListingService {
         return lr.findByLocationId(locationId);
     }
 
-    public Listing createListing(String address, String type, int locationId, double price, int guests, int cap){
-        Listing l = new Listing(0,address,type,locationId,price,guests,cap);
+    public Listing createListing(String address, String type, int locationId,String image, double price, int guests, int cap){
+        Listing l = new Listing(0,address,type,locationId,image,price,guests,cap);
         return lr.save(l);
     }
 

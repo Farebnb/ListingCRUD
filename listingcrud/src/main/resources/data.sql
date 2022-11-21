@@ -1,11 +1,8 @@
-insert into Listing (id, address, type, locationId, price, guests, cap) values
-(1,'123 xyz road', 'Hotel', 1, 100, 0 , 5),
-(2,'123 xyz road', 'Hotel', 1, 100, 0, 5),
-(3,'123 xyz road', 'Cottage', 1, 100, 0, 5),
-(4,'123 xyz road', 'Cottage', 1, 100,0, 5),
-(5,'123 xyz road', 'Igloo', 2,100, 0 , 5),
-(6,'123 xyz road','Condo', 1,100, 0, 5),
-(7,'123 xyz road','House', 1,100, 0, 5),
-(8,'123 xyz road','Loft', 3,100, 0, 5),
-(9,'Denver','Apartment', 1,100, 0, 5),
-(10,'Seattle', 'House',1,100, 0, 5);
+insert into Listing (id, address, type, locationId, image, price, guests, cap) values
+(1,'123 xyz road', 'Hotel', 1, 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', 100, 0 , 5),
+(2,'123 xyz road', 'Hotel', 1, 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG9tZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', 100, 0, 5),
+(3,'123 xyz road', 'Cottage', 1, 'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG9tZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', 100, 0, 5),
+(4,'123 xyz road', 'Cottage', 1,'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' , 100,0, 5),
+(5,'123 xyz road', 'Igloo', 2,'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' ,100, 0 , 5),
+(6,'123 xyz road','Condo', 1, 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', 100, 0, 5),
+(7,'123 xyz road','House', 1, 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60', 100, 0, 5);
