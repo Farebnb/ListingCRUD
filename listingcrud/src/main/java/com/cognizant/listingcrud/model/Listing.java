@@ -16,6 +16,8 @@ public class Listing {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    private String title;
+
     private String address;
 
     private String type;
@@ -30,6 +32,8 @@ public class Listing {
     private int guests;
 
     private int cap;
+
+    private int rating;
 
 
 }
