@@ -38,5 +38,8 @@ public class Listing {
     @Column(name = "USERID")
     private int userId;
 
+    @Column(name = "ISTRENDING")
+    private boolean isTrending;
+
 
 }
