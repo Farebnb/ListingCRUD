@@ -33,7 +33,10 @@ public class Listing {
 
     private int cap;
 
-    private int rating;
+    private double rating;
+
+    @Column(name = "USERID")
+    private int userId;
 
 
 }

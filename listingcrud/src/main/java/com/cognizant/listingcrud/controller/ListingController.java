@@ -67,6 +67,6 @@ public class ListingController {
         int guest = Integer.parseInt(body.get("guests"));
         int caps = Integer.parseInt(body.get("cap"));
         int lId = Integer.parseInt(body.get("locationId"));
-        return new ResponseEntity<>(ls.createListing(body.get("title"),body.get("address"),body.get("type"),lId, body.get("image"), p, guest, caps, Integer.parseInt(body.get("rating"))  ), HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(ls.createListing(body.get("title"),body.get("address"),body.get("type"),lId, body.get("image"), p, guest, caps, Double.parseDouble(body.get("rating")),Integer.parseInt(body.get("userId"))  ), HttpStatus.ACCEPTED);
     }
 }
