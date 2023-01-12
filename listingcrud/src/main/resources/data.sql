@@ -6,3 +6,9 @@ insert into Listing (id, title, address, type, locationId, image, price, guests,
 (5,'Home','123 xyz road', 'Igloo',1004,'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' ,100, 0 , 5,5.00, 1001, false ),
 (6,'Home','123 xyz road','Condo', 1005, 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', 100, 0, 5, 4.91, 1000, true),
 (7,'Home','123 xyz road','House', 1006, 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60', 100, 0, 5, 5.00, 1000, true);
+
+
+
+insert into Favourites (id, userId, listingId) values
+(1,1000, 2),
+(2, 1001, 4);
